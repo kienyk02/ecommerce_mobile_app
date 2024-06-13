@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">EcomApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="book">Book</string>
+    <string name="see_all">See all</string>
+    <string name="search">Search</string>
+    <string name="store_location">Hoan Kiem, Ha Noi, Viet Nam</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="checkout_title">Checkout</string>
+    <string name="payment_title">Payment</string>
+    <string name="ggmap_apikey">AIzaSyAZQtUsYMVdmPgulpjq4d58sU_HfGl3JAM</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="nav_home">Trang Chủ</string>
+    <string name="nav_cart">Giỏ Hàng</string>
+    <string name="nav_favorite">Đề Cử</string>
+    <string name="nav_order">Lịch Sử Đặt Hàng</string>
+    <string name="nav_notification">Thông Báo</string>
+    <string name="nav_dashboard">Thống Kê</string>
+    <string name="nav_logout">Đăng Xuất</string>
+    <string name="email_input">Email Của Bạn</string>
+    <string name="password_input">Nhập Mật Khẩu</string>
+    <string name="forgot_password">Quên Mật Khẩu?</string>
+    <string name="sign_in">Đăng Nhập</string>
+    <string name="sign_in_with_google">Đăng Nhập Với Google </string>
+    <string name="ask_account">Chưa Có Tài Khoản?</string>
+    <string name="recommend_signup">Tạo Tài Khoản</string>
+    <string name="user_name">Tiến Nguyễn</string>
+    <string name="signup_name">Họ và Tên</string>
+    <string name="sign_up">Đăng Ký</string>
+    <string name="nav_user">Tài Khoản</string>
+    <string name="nav_setting">Cài Đặt</string>
+</resources>

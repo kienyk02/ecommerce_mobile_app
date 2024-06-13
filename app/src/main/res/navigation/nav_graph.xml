@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!--    LVK Start-->
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.ecomapp.ui.view.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.ecomapp.ui.view.checkout.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_GGMapFragment"
+            app:destination="@id/GGMapFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_shipmentMethodFragment"
+            app:destination="@id/shipmentMethodFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/GGMapFragment"
+        android:name="com.example.ecomapp.ui.view.checkout.GGMapFragment"
+        android:label="fragment_g_g_map"
+        tools:layout="@layout/fragment_g_g_map" />
+
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.example.ecomapp.ui.view.order.OrderHistoryFragment"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_order_history" >
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_searchOrderFragment"
+            app:destination="@id/searchOrderFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchOrderFragment"
+        android:name="com.example.ecomapp.ui.view.order.SearchOrderFragment"
+        android:label="fragment_search_order"
+        tools:layout="@layout/fragment_search_order" >
+        <action
+            android:id="@+id/action_searchOrderFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.ecomapp.ui.view.order.OrderDetailFragment"
+        android:label="fragment_order_detail"
+        tools:layout="@layout/fragment_order_detail" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ecomapp.ui.view.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_displayProductFragment"
+            app:destination="@id/displayProductFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailProductFragment2"
+            app:destination="@id/detailProductFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_suggestProductCfFragment"
+            app:destination="@id/suggestProductCFFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.ecomapp.ui.view.product.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.ecomapp.ui.view.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.ecomapp.ui.view.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/detailProductFragment"
+        android:name="com.example.ecomapp.ui.view.product.DetailProductFragment"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" >
+        <action
+            android:id="@+id/action_detailProductFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayProductFragment"
+        android:name="com.example.ecomapp.ui.view.product.DisplayProductFragment"
+        android:label="fragment_display_product"
+        tools:layout="@layout/fragment_display_product" >
+        <action
+            android:id="@+id/action_displayProductFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_enter"
+            app:popEnterAnim="@anim/anim_popenter"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_displayProductFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_displayProductFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_displayProductFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popEnterAnim="@anim/anim_popenter"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_displayProductFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.ecomapp.ui.view.product.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_displayProductFragment"
+            app:destination="@id/displayProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.ecomapp.ui.view.intro.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ecomapp.ui.view.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.example.ecomapp.ui.view.auth.ForgotFragment"
+        android:label="fragment_forgot"
+        tools:layout="@layout/fragment_forgot" >
+        <action
+            android:id="@+id/action_forgotFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.ecomapp.ui.view.auth.VerificationFragment"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" >
+        <action
+            android:id="@+id/action_verificationFragment_to_renewPasswordFragment"
+            app:destination="@id/renewPasswordFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/renewPasswordFragment"
+        android:name="com.example.ecomapp.ui.view.auth.RenewPasswordFragment"
+        android:label="fragment_renew_password"
+        tools:layout="@layout/fragment_renew_password" >
+        <action
+            android:id="@+id/action_renewPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.ecomapp.ui.view.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.ecomapp.ui.view.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_settingFragment_to_addressFragment"
+            app:destination="@id/addressFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+        <action
+            android:id="@+id/action_settingFragment_to_bankFragment"
+            app:destination="@id/bankFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.ecomapp.ui.view.setting.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.ecomapp.ui.view.setting.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+        <action
+            android:id="@+id/action_addressFragment_to_GGMapFragment"
+            app:destination="@id/GGMapFragment"
+            app:enterAnim="@anim/enim_enter"
+            app:exitAnim="@anim/enim_exit"
+            app:popExitAnim="@anim/anim_popexit" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankFragment"
+        android:name="com.example.ecomapp.ui.view.setting.BankFragment"
+        android:label="fragment_bank"
+        tools:layout="@layout/fragment_bank" />
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.example.ecomapp.ui.view.checkout.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" />
+    <fragment
+        android:id="@+id/shipmentMethodFragment"
+        android:name="com.example.ecomapp.ui.view.checkout.ShipmentMethodFragment"
+        android:label="fragment_shipment_method"
+        tools:layout="@layout/fragment_shipment_method" />
+    <fragment
+        android:id="@+id/suggestProductCFFragment"
+        android:name="com.example.ecomapp.ui.view.product.SuggestProductCFFragment"
+        android:label="fragment_suggest_product_c_f"
+        tools:layout="@layout/fragment_suggest_product_c_f" >
+        <action
+            android:id="@+id/action_suggestProductCFFragment_to_detailProductFragment"
+            app:destination="@id/detailProductFragment" />
+    </fragment>
+    <!--    LVK End-->
+</navigation>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/user_grey"
+            android:checkable="false"
+            android:title="@string/nav_user"/>
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/cart_icon"
+            android:checkable="false"
+            android:title="@string/nav_cart"/>
+
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/favorite_icon"
+            android:checkable="false"
+            android:title="@string/nav_favorite"/>
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/order_icon"
+            android:checkable="false"
+            android:title="@string/nav_order"/>
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/notification_icon"
+            android:checkable="false"
+            android:title="@string/nav_notification"/>
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard_icon"
+            android:checkable="false"
+            android:title="@string/nav_dashboard"/>
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/setting_icon"
+            android:checkable="false"
+            android:title="@string/nav_setting"/>
+
+    </group>
+
+    <item
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout_icon"
+                android:checkable="false"
+                android:title="@string/nav_logout"/>
+        </menu>
+
+    </item>
+
+</menu>
